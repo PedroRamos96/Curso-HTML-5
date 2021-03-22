@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>7.css3 nuevas reglas</title>
+
+	<style type="text/css">
+		
+		#principal{
+
+			width: 500px;
+			/*background-color: lightblue;*/
+			text-align: center;
+			margin: 15px auto; /* centra el txt sin importar la resolucion de la ventana */
+			padding: 20px;
+			border: 3px solid pink;
+			border-radius: 10px;/*colocando 1 sola medida toma los 4 lados x igual*/
+			box-shadow: grey 5px 10px 10px; /*ultimo parametro difuminacion de la sombra*/
+			outline: 5px dashed lightblue; /*agregar borde exterior a contenedor*/
+			outline-offset: 10px; /*distancia el borde del contenedor*/
+			-webkit-transform: rotate(3deg); /*se especifica en cuantos grados rotar el elemento*/
+			-webkit-transition: -webkit-transform 1s ease 0.5s;/*paramentros(dura 1 seg, efecto, a cuento tiempo de posicionar el raton comienza la transicion*/
+			
+			background: -webkit-linear-gradient(bottom, white, lightblue);
+			/* webkit especificancion navegador chrome opera edge*/
+			/* moz especificancion navegador firefox*/
+			/* ms especificancion navegador explorer*/
+
+			/*
+				background: -webkit-linear-gradient(bottom, white 30%, lightblue 70%)
+				            puedo especificar que porcentaje ocupa cada color
+				            puedo especificar si el degradado es lineal(linear)con parametros: left,right,top,bottom
+				            o circular(radial) con parametros: center, circle/ellipse
+			*/
+
+		}
+
+		#principal:hover /*pseudoclase, caracteristicas que va a tenr el elemento cuando el ratob se pocisione encima(hover)*/
+		{
+			-webkit-transform: scale(0.5); /*cambia tamaño de elemento, 1 valor original, si agrego parametro -1 gira el elemento dando efecto espejo (1,-1)*/
+			-webkit-transform: skew(30deg); /*cambia perspectiva de vision*/
+		}
+
+		/* le doy nombre a la fuente y especifico ruta(tiene que estar en la raiz del server) */
+		@font-face
+		{
+			font-family: 'mi fuente';
+			src:url('GOTHIC.TTF');
+		}
+			
+		#titulo{
+
+			font:bold 36px "mi fuente";
+			text-shadow: grey 5px 5px 5px;
+			color: rgba(0,0,0,0.3);/*ultimo parametro es el que especifica transparencia valor entre 0-1*/
+
+		}
+
+	</style>
+</head>
+<body>
+
+	<header id="principal">
+
+		<span id="titulo">estilos CSS3</span>
+		<!--span es un contenedor en línea,sirve para aplicar estilo al texto o agrupar elementos en línea-->
+		
+	</header>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!--
+
+    ELEMENTO INPUT ATRIBUTOS:
+
+        TYPE:
+
+            submit: boton enviar
+            text: casilla de texto
+            Email: introducciom de mail con validacion incluida
+            Search: casilla pra realizar busqueda
+            url: instruduccion link con validacion incluida
+            Tel: introduccion num de telefono, sin validacion
+            Number (junto con min, max y step): introduccion de numero especificando valores numericos 
+            Range (junto con max, min y step): incluye cursor/dial para arrastrar valor numerico
+            Date
+            Week
+            Month
+            Time
+            datetime: zona horaria
+
+        
+    ATRIBUTOS HTML 5(FORM):
+
+            placerholder: permite incluir pequenas instrucciones en gris claro para el usuario dentro de la casilla
+            required: hace que el campo que contenga este atributo sea requerido
+            multiple: permite enviar mas de 1 dato en un mismo campo(separados con ,)
+            autofocus: en que casilla aparece el cursor cuando se carga la pagina
+            pattern: permite establecer validaciones en campos con simbolos a definir
+            form: construye un elemento de formulario fuera del formulario
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section>
+
+        <form name="miformulario" id=miformulario method="get" autocomplete="off">
+
+            Nombre:&nbsp; <input type="text" name="nombre" placeholder="ingrese nombre"><br><br>
+            Email:&nbsp; <input type="email" name="email" required><br><br>
+            Buscar:&nbsp; <input type="search" name="buscar" ><br><br>
+            Link:&nbsp; <input type="url" name="url" autofocus><br><br>
+            Edad:&nbsp; <input type="number" min="0" max="100" step="5" placeholder="multiplos de 5" name="edad"><br><br>
+            Porcentaje:&nbsp; <input type="range" min="0" max="100"><br><br>
+            Fecha:&nbsp; <input type="date" name="fecha"><br><br>
+            Semana:&nbsp; <input type="week" name="semana"><br><br>
+            Mes:&nbsp; <input type="month" name="mes"><br><br>
+            Tiempo:&nbsp; <input type="time" name="tiempo"><br><br>
+            CP:&nbsp; <input pattern="[0-9]{4}" placeholder="ingrese 4 digitos"><br><br> 
+            <!--[rango de simbolos a inluir]{cantidad de caracteres}-->
+
+            <input type="submit" value="enviar"><br><br>
+
+
+        </form>
+
+    </section>
+
+    <img src="imagenes/imagen 1.jpg" width="300" height="300"><br>
+    nombre?:&nbsp;<input type="text" name="imagen" form="miformulario">
+
+</body>
+
+</html>

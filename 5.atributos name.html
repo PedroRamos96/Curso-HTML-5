@@ -1,0 +1,56 @@
+<!--
+
+	TIPOS DE SELECTORES:
+
+		•p{}: de etiqueta
+		•#nombre: de id (aplicable a un unico elemento de la pagina web)
+		•.miestlo: de clase(aplicable a multiples elementos)
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>untitled</title>
+		<style>
+			
+			p[name="celeste"]{
+
+				color: lightblue;
+			}
+
+			/* simbolo ^ le indica a los elementos que comiencen con "mis"
+			   se pongan, en este caso, de color rosa  */
+			p[name^="mis"]{
+
+				color: pink;
+			}
+
+			/* simbolo $ le indica a los elementos que terminen con "mento"
+			   se pongan, en este caso, de color verde  */
+			p[name$="mento"]{
+
+				color: lightgreen;
+			}
+
+			/* simbolo * le indica a los elementos que contengan la palabra con "tilo"
+			   se pongan, en este caso, de color violeta  */
+			p[name*="tilo"]{
+
+				color: purple;
+			}
+
+		</style>
+
+	</head>
+	<body>
+
+		<p name="elemento">hola</p>
+		<p name="celeste">como</p>
+		<p name="miselementos">estas</p>
+		<p name="estilo">tonta</p>
+
+	</body>
+</html>

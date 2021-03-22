@@ -1,0 +1,68 @@
+<!--
+
+	TIPOS DE SELECTORES:
+
+		•p{}: de etiqueta
+		•#nombre: de id (aplicable a un unico elemento de la pagina web)
+		•.miestlo: de clase(aplicable a multiples elementos)
+
+-->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>untitled 2</title>
+		<style>
+			
+			/*pone propiedad a los, en este caso, segundos elementos p que sean hermanos*/
+			p:nth-child(2) /* odd(todos los elementos impares), even(todos los pares)*/
+			{
+				color: lightblue;
+			}
+
+			/*pone propiedad a los p que sean primeros hijos*/
+			p:first-child
+			{
+				color: pink;
+			}
+
+			/*pone propiedad a los p que sean ultimos hijos*/
+			p:last-child
+			{
+				color: lightgreen;
+			}
+
+			/*pone propiedad a los unicos hijos de un elementp*/
+			p:only-child
+			{
+				color: orange;
+			}
+
+		</style>
+
+	</head>
+	<body>
+
+		<p>hola</p><!--primer hijo de body-->
+		<p>como</p> <!--segundo hijo de body-->
+		<p>estas</p>
+		<p>tonta</p>
+
+		<ol>
+			<li><p>personajes</p></li>
+			<li>
+
+				<p>darth vader</p><!--primer hijo de ol-->
+				<p>luke skywalker</p> <!--segundo hijo de body-->
+				<p>yodat</p>
+				<p>stormtrooper</p><!--ultimo hijo de ol-->
+
+			</li>
+		</ol>
+
+		<p>hasta la vista idiotas</p><!--ultimo hijo de body-->
+
+	</body>
+</html>

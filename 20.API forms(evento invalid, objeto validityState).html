@@ -1,0 +1,160 @@
+<!--
+    evento "invalid": se desencadena cada vez que un formulario falla en la validacion
+    objeto validityState:  validacion en tiempo real
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        table {
+
+            text-align: center;
+            background-color: blanchedalmond;
+            width: 25%;
+            margin: auto;
+
+        }
+
+        td {
+
+            padding: 15px;
+        }
+    </style>
+
+    <script>
+
+        var datosUsuario, usuario, email, edad, rango, enviar;
+
+        function comenzar() {
+
+            datosUsuario = document.getElementById('datos_usuario');
+            usuario = document.getElementById("usuario");
+            email = document.getElementById("miemail");
+            edad = document.getElementById('miedad');
+            rango = document.getElementById('rango');
+            enviar = document.getElementById('enviar');
+
+            datosUsuario.addEventListener("input", validarTiempoReal, false);
+            datosUsuario.addEventListener("invalid", validarUsuario, true);//invalid construye un objeto 'error'
+            edad.addEventListener("mousemove", cambiarRango, false);
+            enviar.addEventListener("click", enviarFormulario, false);
+        }
+
+        function cambiarRango() {
+
+            var calculo = edad.value - 20; // value incial 30 ( 30-30)
+
+            if (calculo < 20) {
+                calculo = 0;
+
+                edad.value = 20;
+            }
+
+            rango.innerHTML = calculo + " a " + edad.value;
+
+        }
+
+        function validarUsuario(e) { //almacenamos en e el objeto error generado por el evento 'invalid'
+
+            var elemento = e.target;//target: nos dice cual es el objeto de nuestro formulario que ocasiono el error 
+            elemento.style.background = "red";
+
+        }
+
+        function enviarFormulario() {
+
+            var todoOk = datosUsuario.checkValidity();//devuelve si la validacion es true o false
+
+            if (todoOk) {
+
+                datosUsuario.submit(); //envia el formulario
+            }
+
+        }
+
+        function validarTiempoReal(e) {
+
+            var elemento = e.target;
+
+            if (elemento.validity.valid) {
+
+                elemento.style.background = "white";
+            }
+            else {
+
+                elemento.style.background = "red";
+            }
+
+        }
+
+        window.addEventListener("load", comenzar, false);
+
+    </script>
+</head>
+
+<body>
+
+    <section>
+
+        <form name="datos_usuario" id="datos_usuario" method="get">
+
+            <table>
+                <tr>
+                    <td>
+                        Usuario:
+                    </td>
+                    <td>
+                        <input pattern="[A-Za-z]{4}" name="usario" id="usuario" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Email:
+                    </td>
+                    <td>
+                        <input type="email" name="miemail" id="miemail" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Edad:
+                    </td>
+                    <td>
+                        <input type="range" name="miedad" id="miedad" min="0" max="120" value="20" step="20">
+                        <!--por defecto aparece en el valor 30-->
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <output id="rango">0 a 30</output>
+                        <!--describe texto que puede ser modificado dinamicamente desde codigo js-->
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="submit" id="enviar">
+                    </td>
+                </tr>
+
+            </table>
+
+
+        </form>
+
+    </section>
+
+</body>
+
+</html>

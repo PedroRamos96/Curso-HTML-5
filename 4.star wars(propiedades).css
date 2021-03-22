@@ -1,0 +1,60 @@
+/* 
+	PROPIEDADES CSS:
+
+		•MARGIN(left, right, up, down): establece el margen para los cuatro lados de un elemento
+		•PADDING(left, right, up, down): establece el espacio de relleno requerido por todos
+			los lados de un elemento, el área de padding es el espacio entre 
+			el contenido del elemento y su borde 
+		•FLOAT: ubica un elemento al lado izquierdo o derecho de su contenedor, 
+			permitiendo a los elementos de texto y en línea aparecer a su costado
+		•CLEAR: especifica si un elemento puede estar al lado de elementos 
+			flotantes que lo preceden o si debe ser movido
+		•HEIGHT: especifica la altura del area de contenido de un elemento	
+
+*/
+
+
+
+ body
+ {
+ 	background-color: pink;
+ }
+
+
+#header1
+{
+	background-color: #8CCFEA;
+}
+
+#navegacion1
+{
+	background-color: white;
+}
+
+#aside1
+{
+	background-color: lightyellow;
+	float: left;
+	height: 600px;
+}
+
+#section1
+{
+	background-color: lightblue;
+	margin-left: 200px;
+	padding-left: 50px;
+	padding-top: 20px;
+}
+
+#footer1
+{
+	background-color: lightblue;
+	clear: both;
+}
+
+li
+{
+	background-color: lightblue;
+	display: inline; /* hace que los elementos inblock sean inline(sin saltos)*/
+}
+

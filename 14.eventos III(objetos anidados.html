@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function eventos(){
+
+            var elemento1=document.getElementsByTagName("p")[0];
+            var elemento2=document.getElementsByTagName("img")[0];
+
+            elemento1.addEventListener("click",mensaje2,true);
+            elemento2.addEventListener("click",mensaje1,false)
+        }
+
+        function mensaje1()
+        {
+            alert("bb8");
+        }
+        
+        function mensaje2(){
+
+            alert("star wars");
+        }
+
+        window.addEventListener("load",eventos,false);
+
+    </script>
+
+</head>
+
+<body>
+
+    <p><img src="imagenes/imagen 1.jpg" width="300" height="300"></p>
+
+</body>
+
+</html>

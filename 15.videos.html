@@ -1,0 +1,61 @@
+<!--
+
+    FORMATOS SOPORTADOS POR NAVEGDORES:
+
+        MP4
+        Ogg
+
+    ETIQUETAS HTML5 PARA VIDEOS: <videos></video>
+
+    ATRIBUTOS:
+
+        Src (especificar ubicacion de video)
+        Controls (especificia si posee botones(play, pause, etc))
+        Autoplay (especifica si el video se reproduce solo al cargar la pagina)
+        Loop (el video se reproduce en loop)
+        Poster (incluir imagen jpg como portada de video)
+        preload (caracteristicas del video duracion, fotogramas, etc)
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #video{
+
+            width: 720px;
+            margin: 100px auto;
+            background: black;
+            padding: 5px;
+            box-shadow: grey 5px 5px 10px;
+
+            -webkit-border-radius: 8px;
+            border-radius: 8px;
+            
+        }
+
+    </style>
+    
+</head>
+<body>
+    
+    <section id="video">
+
+        <video id="mivideo" width="720" controls poster="videos/portadas/yungblud.jpg">
+
+            <source src="videos/yungblud.mp4">
+            <source src="videos/yungblud.ogg">
+            <!--Si algun navegador no acepta un formato de video intenta con otro-->
+
+        </video>
+
+    </section>
+
+</body>
+</html>

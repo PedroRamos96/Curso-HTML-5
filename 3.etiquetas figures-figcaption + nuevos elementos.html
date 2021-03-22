@@ -1,0 +1,116 @@
+<!--
+
+<figure></figure> insertar elementos independientes(imagenes, videos, etc..)
+<figcaption></figcaption> pie de foto de figure
+
+formatos admitidos por la web: jpg, gif, png
+
+<mark></mark> remarca texto como rotulador
+<em></em> pone el texto en cursiva
+<strong></strong> marca texto importante
+<b></b> igual que strong pero ya no se usa
+<small></small> presentar texto legales(copyrihgt, derechos reservados)
+<cite></cite> resaltar titulos de libros, canciones, peliculas, traajos propios, etc
+<address></address> para info de contacto, va dentro del footer(inserta salto de linea)
+<time></time>
+<time datetime= "2020-09-18" pubdate>
+
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="iso-8559-1"/>
+		<meta name="description" content="Pagina de HTLM 5"/>
+		<meta name="keywords" content="html5, css3, javascript, diseño web"/>
+
+		<title>el mundo de star wars</title>
+	<!--link sirve para incluir elementos adicionales a la pag como x eje hojas de estilo o
+		documentos javascript-->
+		<link rel="stylsheets" href="mihojadeestilos.css">
+
+	</head>
+
+	<body>
+	
+		<header>
+
+			<h1>La mejor saga de la historia</h1><!--h1 etiqueta de tamaño h1,h2,h3,etc --->
+
+		</header>
+
+		<nav>
+			<!--ul lista desordenada con •-->
+			<ul>
+				<li>Historia</li>
+				<li>Personajes</li>			
+			</ul>
+
+			<!--ol lista ordenada con numeros-->
+			<ol>
+				<li>Series</li>
+				<li>Peliculas</li>
+			</ol>
+
+		</nav>
+
+		<aside>
+
+			<blockquote>primer elemento</blockquote>
+			<blockquote>segundo elemento</blockquote>
+			<blockquote>tercer elemento</blockquote>
+
+		</aside>
+
+		<section>
+		
+			<article>
+
+				<header>
+					
+					<hgroup>
+
+						<h2>Disney compro <cite>star wars</cite></h2>
+						<h3>subtitulo: es una mierda</h3>
+
+					</hgroup>
+
+				</header>
+
+				<figure>
+					
+					<!--ruta relativa, esta dentro de la misma carpeta que el archivo html-->
+					<img src="imagenes/gatito.jpg"/>
+					<figcaption> my mood 24/7</figcaption>
+
+				</figure>
+			
+				<p>la mejor pelicula del mundo <cite>star wars: la venganza de los sith</cite></p>	
+				<time datetime="2005/5/19 pubdate">fecha de publicacion 19/05/2019</time>
+				<p><mark>luke skywalker</mark></p>
+				<p>el sith: <em>darth vader</em></p>
+				<p><strong>yoda</strong></p>
+
+				<footer>
+				
+					<p>Comentarios de usarios</p>
+
+				</footer>
+
+			</article>
+
+		</section>
+
+		<footer>
+		
+			<small>derechos reservados</small>
+			<address>tel:0303456</address>
+
+		</footer>
+
+	</body>
+
+</html>

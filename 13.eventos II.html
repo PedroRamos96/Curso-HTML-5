@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var picture = new Array(2);
+
+        function EventosImagen() {
+
+            for (var i = 0; i < 3; i++) {
+
+                picture[i] = document.getElementsByTagName("img")[i];
+                //guarda dentro del array cada imagen
+
+            }
+
+            picture[0].addEventListener("mouseover", function () { picture[0].width = 400; picture[0].width = 400; }, false);
+            picture[0].addEventListener("mouseout", function () { picture[0].width = 300; picture[0].width = 300; }, false);
+            picture[0].addEventListener("click", function () { alert("bb8") }, false);
+
+            picture[1].addEventListener("mouseover", function () { picture[1].width = 400; picture[1].width = 400; }, false);
+            picture[1].addEventListener("mouseout", function () { picture[1].width = 300; picture[1].width = 300; }, false);
+            picture[1].addEventListener("click", function () { alert("3cpo") }, false);
+
+            picture[2].addEventListener("mouseover", function () { picture[2].width = 400; picture[2].width = 400; }, false);
+            picture[2].addEventListener("mouseout", function () { picture[2].width = 300; picture[2].width = 300; }, false);
+            picture[2].addEventListener("click", function () { alert("r2d2") }, false);
+
+        }
+
+        /*
+        function aumentarImagen(){
+        
+            picture.width=400;
+            picture.height=400;
+        
+        }
+        
+        function disminuirImagen(){
+        
+            picture.width=300;
+            picture.height=300;
+        }
+        
+        function mensajeImagen(){
+        
+            alert("personaje: ....");
+        
+        }
+        */
+
+        //window.onload=EventosImagen;
+
+        window.addEventListener("load", EventosImagen, false);
+
+    </script>
+
+</head>
+
+<body>
+
+    <p><img src="imagenes/imagen 1.jpg" width="300" height="300"></p>
+    <p><img src="imagenes/imagen 2.jpg" width="300" height="300"></p>
+    <p><img src="imagenes/imagen 3.jpg" width="300" height="300"></p>
+
+</body>
+
+</html>

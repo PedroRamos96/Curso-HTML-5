@@ -1,0 +1,48 @@
+#video {
+
+    width: 720px;
+    margin: 100px auto;
+    background: black;
+    padding: 8px 8px;
+    box-shadow: grey 5px 5px 10px;
+
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+
+}
+
+nav {
+
+    margin: 5px 0;
+}
+
+#botones {
+
+    float: left;
+    width: 100px;
+    height: 20px;
+}
+
+#barra {
+
+    background: white;
+    width: 600px;
+    height: 16px;
+    border: 1px solid grey;
+    padding: 3px;
+    margin-left: 80px;
+
+    -webkit-border-radius: 10px;
+    border-radius: 8px;
+
+}
+
+#progreso {
+
+    position: absolute;
+    /*lo deja a la izquierda donde se encuentra*/
+    width: 0px;
+    height: 16px;
+    background: rgb(105, 178, 180);
+
+}

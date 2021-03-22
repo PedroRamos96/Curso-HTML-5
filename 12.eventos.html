@@ -1,0 +1,69 @@
+<!--
+    Definicion de evento: desencadenante de la accion
+    Quien desencadena la accion?
+
+        el usuario (al hacer click onclick)
+        el sistema (al cargar el documento window.onload)
+
+    Manejador de evento: codigo que procesa el evento
+
+    FORMAS DE CONSTRUIR MANEJADORES DE EVENTOS:
+
+        1. manejadores de eventos en linea(poco recomendable)
+        2. manejadores de eventos como propiedades
+        3. metodo addEventListener() nuevo en especificacion HTML5(mas recomendable,
+            permite aplicar varios eventos en un mismo objeto)
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var picture;
+
+        function mensajeImagen(){
+
+            alert("miauuuuuuu");
+
+        }
+
+        function EventosImagen(){
+
+            picture=document.getElementsByTagName("img")[0];
+            picture.addEventListener("mouseover",aumentarImagen,false);
+            picture.addEventListener("mouseout",disminuirImagen,false);
+            picture.addEventListener("click",mensajeImagen,false);
+            //primer parametro tipo de evento
+            //segundo parametro funcion que se ejecuta
+            //elemtento booleando true/false
+
+        }
+
+        function aumentarImagen(){
+
+            picture.width=518;
+            picture.height=257;
+
+        }
+
+        function disminuirImagen(){
+
+            picture.width=488;
+            picture.height=227;
+        }
+
+        window.onload=EventosImagen;
+
+    </script>
+</head>
+<body>
+     <p><img src="imagenes/gatito.jpg"></p>
+
+</body>
+</html>

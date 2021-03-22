@@ -1,0 +1,31 @@
+HTLM 5:
+
+	•es un lenguaje de ETIQUETAS
+	•compuesto por los lenguajes html, css y javascript
+	•.HTML: brinda la estructura de las paginas web
+	•.CSS: brinda la apariencia de las paginas web
+	•.JS: interactividad y animacion
+
+
+Etiquetas: 
+
+	•es un codigo que esta dentro de los simbolos <>
+	•siempre que se abre una etiqueta se cierra agregando / dentro de la ultima : <> </>
+	•las etiquetas van en estructuras anidadas(etiquetas dentro de otras)
+	•la estructura de una pagina web siempre se escribe dentro de las etiquetas <html> </html>
+	•antes de la etiqueta <html> se debe especificar en que version de html se programa <!DOCTYPE html>
+	•dentro de las etiquetas html van las etiquetas <head> </head>, la info que va dentro de esas etiquetas
+		no son visibles al usuario(hojas de estilo, archivos javascripts ext/int, iconos,titulo de pag web)
+	•luego de las etiquetas head van las etiquetas <body> </body> donde va la info visible al usurio
+
+TIPOS DE ETIQUETAS EN HTML:
+
+	•block(genera salto de linea arriba y abajo de la etiqueta ocupando el 100% del ancho de la hoja)
+	•inline(no genera salto de linea)
+
+DONDE COLOCAR ARCHIVOS CSS:
+
+	•en archivos independiente con extension css(permite modificar una o mas paginas del sitio web con facilidad)
+	•en cabecera de documento html(solo modifica una pagina)
+	•dentro de etiqueta(estilo inline, solo modifica etiqueta)
+
